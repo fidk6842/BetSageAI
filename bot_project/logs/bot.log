@@ -1,0 +1,13 @@
+2025-02-14 17:44:46,525 - OddsBot - INFO - OddsAnalyst bot initializing...
+2025-02-14 17:44:52,452 - OddsBot - ERROR - Callback error: algorithm_selector() missing 1 required positional argument: 'paid_user'
+Traceback (most recent call last):
+  File "C:\Users\Praise\Desktop\bot_project\app\main.py", line 117, in handle_callback
+    await handler(query, context, values)
+  File "C:\Users\Praise\Desktop\bot_project\app\main.py", line 373, in handle_league_selection
+    reply_markup=self.buttons.algorithm_selector()
+TypeError: algorithm_selector() missing 1 required positional argument: 'paid_user'
+2025-02-14 19:27:49,077 - OddsBot - INFO - OddsAnalyst bot initializing...
+2025-02-14 19:28:43,856 - OddsBot - INFO - OddsAnalyst bot initializing...
+2025-02-14 19:28:47,872 - OddsBot - INFO - User 6542986482 started the bot
+2025-02-14 19:34:24,414 - OddsBot - INFO - Fetched 21 matches for soccer_epl
+2025-02-14 19:34:24,417 - OddsBot - INFO - Preprocessed 21 valid matches

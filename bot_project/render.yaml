@@ -1,11 +1,17 @@
 services:
-  - type: worker  # Use "web" if your bot uses a web server (e.g., for webhooks)
-    name: sports-bot-worker
+  - type: web
+    name: betsageai
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python -m app.main"  # Adjust if your entrypoint differs
-    python:
-      version: 3.9.13  # Match your Python version
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: |
+      python3 bot_project/app/main.py
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.9.13
+      - key: BOT_TOKEN
+        value: your_bot_token_here
+      - key: SCRAPING_API_KEY
+        value: your_scraping_api_key_here
+      - key: SCRAPING_BASE_URL
+        value: https://api.the-odds-api.com/v4/sports
+    plan: free
+    region: oregon

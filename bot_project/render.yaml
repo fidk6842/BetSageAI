@@ -1,17 +1,9 @@
 services:
   - type: web
-    name: betsageai
-    env: python
-    buildCommand: |
-      pip install -r requirements.txt
-    startCommand: |
-      python3 bot_project/app/main.py
+    name: bot_project
+    runtime: python
+    buildCommand: ""
+    startCommand: python bot_project/app/main.py
     envVars:
-      - key: BOT_TOKEN
-        value: your_bot_token_here
-      - key: SCRAPING_API_KEY
-        value: your_scraping_api_key_here
-      - key: SCRAPING_BASE_URL
-        value: https://api.the-odds-api.com/v4/sports
-    plan: free
-    region: oregon
+      - key: PYTHON_VERSION
+        value: 3.11

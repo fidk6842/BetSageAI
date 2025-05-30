@@ -3,9 +3,9 @@ services:
     name: betsageai
     env: python
     buildCommand: |
-      pip install -r requirements.txt
+      cd bot_project && pip install -r requirements.txt
     startCommand: |
-      python3 -m app.main
+      cd bot_project && python3 -m app.main
     envVars:
       - key: BOT_TOKEN
         value: your_bot_token_here
@@ -15,5 +15,3 @@ services:
         value: https://api.the-odds-api.com/v4/sports
     plan: free
     region: oregon
-    build:
-      cwd: bot_project  # 👈 This sets the working directory for both build AND runtime
